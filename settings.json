@@ -1,48 +1,72 @@
 {
-    // Explorer
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "explorer.compactFolders": false,
-
-    // Window, SideBar and Tabs
+    // 🔹 1. Интерфейс и Окно (Максимальный фокус)
     "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle", // Скрывает верхнее меню (нажмите Alt для показа)
+    "window.zoomLevel": 0,
+    "workbench.startupEditor": "none",
     "workbench.editor.showTabs": "none",
+    "workbench.editor.empty.hint": "hidden", // Убирает текст-подсказку на пустом экране
     "workbench.activityBar.location": "bottom",
     "workbench.statusBar.visible": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "workbench.tips.enabled": false,
+    "breadcrumbs.enabled": false,
+    "chat.commandCenter.enabled": false,
 
-    // Prettier settings
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.tabWidth": 4,
-    "prettier.semi": false,
-    "prettier.singleQuote": true,
-
-    // Editor
+    // 🔹 2. Редактор (Чистый холст)
     "editor.fontFamily": "SF Mono",
     "editor.fontSize": 14,
     "editor.lineHeight": 1.6,
-    "editor.letterSpacing": 0,
     "editor.fontLigatures": false,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorBlinking": "smooth",
-    "editor.renderWhitespace": "none",
-    "editor.minimap.enabled": false,
-    "editor.renderLineHighlight": "all",
-    "editor.smoothScrolling": true,
-    "editor.wordWrap": "on",
-    "editor.lineNumbers": "off", // Number Row
-    "editor.showFoldingControls": "never",
-    "editor.glyphMargin": false,
     "editor.tabSize": 4,
-    "editor.guides.indentation": false,
+    "editor.wordWrap": "on",
+
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "off", // Оставлено выключенным по вашему желанию
+    "editor.glyphMargin": false,
+    "editor.showFoldingControls": "never",
     "editor.lightbulb.enabled": "off",
-    "editor.hover.enabled": "on",
+    "editor.inlayHints.enabled": "off", // Отключает встроенные подсказки типов/параметров (убирает визуальный шум)
+
     "editor.scrollbar.horizontal": "hidden",
     "editor.scrollbar.vertical": "hidden",
     "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true, // Убирает отметку курсора в скрытом скроллбаре
+
+    "editor.renderWhitespace": "none",
+    "editor.renderLineHighlight": "all",
+    "editor.guides.indentation": false,
+    "editor.stickyScroll.enabled": false, // Отключает "прилипание" функций сверху экрана
+
+    // 🔹 3. Курсор, мышь и анимации
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorBlinking": "smooth",
+    "editor.smoothScrolling": true,
+    "editor.mouseWheelZoom": true,
+
+    // 🔹 4. Скобки (Баланс чистоты и удобства)
+    "editor.matchBrackets": "always", // Изменено с "never": без этого очень сложно искать ошибки вложенности
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveBracketPair": false,
+
+    // 🔹 5. Проводник файлов (Дерево)
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+    "workbench.tree.indent": 30,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.enableStickyScroll": false,
+
+    // 🔹 6. Файлы и Форматирование
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "editor.formatOnSave": true,
     "editor.detectIndentation": false,
 
-    // Terminal
+    // 🔹 7. Терминал
     "terminal.integrated.fontFamily": "SF Mono",
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.lineHeight": 1,
@@ -51,39 +75,28 @@
     "terminal.integrated.cursorStyleInactive": "line",
     "terminal.integrated.stickyScroll.enabled": false,
 
-    // Brackets settings
-    "editor.matchBrackets": "never",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-    "editor.guides.bracketPairsHorizontal": false,
-    "editor.guides.highlightActiveBracketPair": false,
-
-    // Folder and file settings
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.hidesExplorerArrows": true,
-    "workbench.tree.indent": 30,
-    "material-icon-theme.activeIconPack": "nest",
-    "workbench.tree.renderIndentGuides": "always",
-    "material-icon-theme.folders.color": "#909090",
-    "workbench.tree.enableStickyScroll": false,
-    "workbench.colorCustomizations": {
-        "tree.indentGuidesStroke": "#fff",
-    },
-
-    // Others My own settings
-    "window.zoomLevel": 1.5,
-    "python.defaultInterpreterPath": "/usr/bin/python3",
-    // "editor.mouseWheelZoom": true,
-    "editor.formatOnSave": true,
-    "workbench.startupEditor": "none",
-    "workbench.tips.enabled": false,
-    "breadcrumbs.enabled": false,
+    // 🔹 8. Git и Расширения
     "git.decorations.enabled": false,
     "scm.diffDecorations": "none",
     "extensions.ignoreRecommendations": true,
-    "workbench.layoutControl.enabled": false,
-    "chat.commandCenter.enabled": false,
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
+
+    // 🔹 9. Prettier и Python
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "python.defaultInterpreterPath": "/usr/bin/python3",
+
+    // 🔹 10. Темы и Иконки
     "workbench.colorTheme": "Webstorm NewUI Theme",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.folders.color": "#909090",
+
+    // 🔹 11. Кастомные цвета
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#ffffff33", // Смягчен цвет направляющих линий
+        "editor.lineHighlightBackground": "#ffffff0a", // Легкое выделение текущей строки
+    },
 }
